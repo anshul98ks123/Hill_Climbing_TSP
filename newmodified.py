@@ -26,7 +26,6 @@ def dist(xcord, ycord, i, j):
 
 # generate start state
 x = [i for i in range(n)]
-shuffle(x)
 xcord = [xcord[x[i]] for i in range(n)]
 ycord = [ycord[x[i]] for i in range(n)]
 current_cost = sum([dist(xcord, ycord, i, (i+1)%n) for i in range(n)])

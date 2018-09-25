@@ -18,7 +18,6 @@ line, = axes.plot(xcord, ycord, 'ro-')
 
 # generate start state
 x = [i for i in range(n)]
-shuffle(x)
 
 # calculates distance between two cities
 def dist(x1, y1, x2, y2):
