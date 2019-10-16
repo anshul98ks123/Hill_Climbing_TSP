@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 f = open('input.txt', 'r')
 
 # read input from file
-# number of cities and x and y coordinates
+# number of cities and their x and y coordinates
 n = int(f.readline())
 xcord = [float(x) for x in f.readline().split(' ')][:n]
 ycord = [float(x) for x in f.readline().split(' ')][:n]
@@ -29,10 +29,10 @@ x = [i for i in range(n)]
 xcord = [xcord[x[i]] for i in range(n)]
 ycord = [ycord[x[i]] for i in range(n)]
 
-# calculate cosr of start state
+# calculate cost of start state
 initial_cost = sum([dist(xcord, ycord, i, (i+1)%n) for i in range(n)])
 
-# calculates heuristic cost of a state
+# calculate heuristic cost of a state
 def heuristic(xcord, ycord, i, j, current_cost):
   total = current_cost
 
@@ -69,7 +69,7 @@ def draw(finished, iteration, cost):
   title = title + ("total distance = %.2f \n" % cost)
   plt.title(title, fontsize = 15)
 
-  # maximize window size of graph
+  # maximize the window size of graph
   figManager = plt.get_current_fig_manager()
   figManager.window.showMaximized()
 
