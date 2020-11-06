@@ -18,10 +18,8 @@ line, = axes.plot(xcord, ycord, 'ro-')
 
 # calculates euclidean distance between two cities
 def dist(xcord, ycord, i, j):
-  x1 = xcord[i]
-  y1 = ycord[i]
-  x2 = xcord[j]
-  y2 = ycord[j]
+  x1, y1 = xcord[i], ycord[i]
+  x2, y2 = xcord[j], ycord[j]
   return (math.sqrt((x1-x2)**2 + (y1-y2)**2))
 
 # generate start state and the ordered coordinates
